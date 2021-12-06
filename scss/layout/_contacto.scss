@@ -1,0 +1,56 @@
+/* Sección Contacto */
+.construccion {
+    @include titulos(nth($font-family, 5), nth($font-size, 5), $aling, $text-uppercase);
+        letter-spacing: $letter-spacing - 8px;
+        color: nth($color, 1);
+        padding: 300px 0 250px 0;
+
+}
+
+/* Whatsapp */
+.wsp {
+position: fixed;
+right: 15px;
+bottom: 15px;
+z-index: 100;
+background-color: #4dc247;
+box-shadow: $text-shadow;
+border-radius: 50%;
+padding: 9px;
+width: 3.5%;
+
+    .wsp-icon {
+    width: $ancho;
+    height: $ancho;
+    }
+}
+/* Fin Whatsapp */
+/* Fin Sección Contacto */
+
+/* Media Querys Sección Contacto */
+
+/* Mobile */
+@media only screen and (max-width:480px) {
+    .construccion {
+        padding: 300px 30px 250px 30px;
+    }
+
+    .wsp {
+    vertical-align: middle;
+    width: 11.5%;
+    }
+}
+/* Fin Mobile */
+
+/* Tablet  */
+@media only screen and (min-width:481px) and (max-width:768px) {
+    .construccion {
+        padding: 300px 30px 250px 30px;
+    }
+
+    .wsp {
+    width: 6%;
+    }
+}
+/* Fin Tablet */
+/* Fin Media Querys Sección Contacto */

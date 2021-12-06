@@ -1,0 +1,142 @@
+/* Pie de página */
+.footer {
+    background-color: nth($color, 6);
+    width: $ancho;
+    display: flex;
+    padding: 40px 0 0px 0;
+    flex-direction: column;
+    align-items: center;
+
+    .footer-li {
+        text-align: $aling;
+
+        .footer-li-2 {
+        display: inline-block;
+        }
+
+        li {
+            a {
+            @include sub-titulos(nth($font-family, 1), nth($font-size, 1), $aling);
+            text-decoration: $text-none;
+            color: nth($color, 7);
+            margin: 20px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+            }
+        }
+    }
+
+    .redes {
+    position: sticky;
+    top: 2900px;
+    text-align: $aling;
+
+        p {
+        @include titulos(nth($font-family, 4), nth($font-size, 2), $aling, $text-uppercase);
+        color: nth($color, 3);
+        padding: 40px 0 0 0;
+        }
+
+        .redes-img {
+        margin-top: -5px;
+
+            img {
+            margin: 0 20px;
+            width: 4rem;
+            height: 4rem;
+            @include prefijos2(2s linear);
+
+            &:hover {
+                @include prefijos(rotate(360deg) scale(1))
+            }
+            }
+
+            a {
+            text-decoration: $text-none;
+            }
+        }
+    }
+}
+
+.legal {
+@include titulos(nth($font-family, 1), nth($font-size, 1), $aling, $text-uppercase);
+letter-spacing: $letter-spacing - 8px;
+background-color: nth($color, 6);
+width: $ancho;
+color: nth($color, 8);
+padding: 50px 0;
+margin: 0;
+}
+/* Fin pie de página */
+
+/* Media Querys Footer */
+
+/* Mobile */
+@media only screen and (max-width:480px) {
+
+    .footer {
+    width: $ancho;
+    padding: 40px 0 0px 0;
+
+        .footer-li {
+
+            .footer-li-2 {
+            margin: 10px 0;
+            text-align: $aling;
+            }
+
+            li {
+                a {
+                font-size: nth($font-size, 1);
+                margin: 20px;
+                }
+            }
+        }
+
+        .redes {
+        position: sticky;
+        top: 2900px;
+        text-align: $aling;
+
+            p {
+            font-size: nth($font-size, 1);
+            padding: 40px 0 10px 0;
+            }
+
+            .redes-img {
+            margin-top: -5px;
+
+                img {
+                width: 3rem;
+                }
+            }
+        }
+    }
+
+    .legal {
+    padding: 50px 60px 70px 50px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width:481px) and (max-width:768px) {
+    .footer {
+        .footer-li {
+        padding: 20px 0 10px 0;
+
+            .footer-li-2 {
+                a {
+                font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .legal {
+    padding: 40px 185px;
+    }
+}
+/* Fin Media Footer */
+/* Fin Pie de Página */

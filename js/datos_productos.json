@@ -1,0 +1,11 @@
+[
+    {"id": "1", "nombre": "Paltas", "precio": "850", "descripcion": "x Kg.", "imagen": "../multimedia/tienda1.jpg"},
+    {"id": "2", "nombre": "Manzanas", "precio": "200", "descripcion": "x Kg.", "imagen": "../multimedia/tienda2.jpg"},
+    {"id": "3", "nombre": "Kiwis", "precio": "400", "descripcion": "x Kg.", "imagen": "../multimedia/tienda3.jpg"},
+    {"id": "4", "nombre": "Frutillas", "precio": "250", "descripcion": "x Kg.", "imagen": "../multimedia/tienda4.jpg"},
+    {"id": "5", "nombre": "Pimientos", "precio": "210", "descripcion": "x Kg.", "imagen": "../multimedia/tienda5.jpg"},
+    {"id": "6", "nombre": "Zapallitos", "precio": "80", "descripcion": "x Kg.", "imagen": "../multimedia/tienda6.jpg"},
+    {"id": "7", "nombre": "Choclos", "precio": "180", "descripcion": "x Kg.", "imagen": "../multimedia/tienda7.jpg"},
+    {"id": "8", "nombre": "Cebollas", "precio": "50", "descripcion": "x Kg.", "imagen": "../multimedia/tienda8.jpg"}
+
+]

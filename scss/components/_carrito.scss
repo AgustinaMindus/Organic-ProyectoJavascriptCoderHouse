@@ -1,0 +1,294 @@
+/* SECCION CARRITO */
+
+    .contenedor-carrito {
+        @extend %flex;
+        background-color: nth($color, 2);
+        position: fixed;
+        right: -700px;
+        top: 70px;
+        z-index: 10000;
+        box-shadow: $text-shadow;
+        border-radius: 10px;
+        padding: 10px;
+        width: 40rem;
+
+        .card-carrito {
+        background-color:  nth($color, 8);
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 3px;
+        @extend %flex;
+
+        .img-carrito {
+        border-radius: 10px 10px 0 0;
+        width: 20%;
+        }
+
+        .titulo-carrito, .precioCarrito {
+        font-family:  nth($font-family, 2);
+        font-size:  nth($font-size, 1);
+        color: nth($color, 7);
+        margin: 0;
+        padding: 0 10px;
+        }
+
+        .cantidadCarrito {
+        @include sub-titulos(nth($font-family, 1), nth($font-size, 1), $aling);
+        color: nth($color, 7);
+        width: 5rem;
+        }
+
+        .borrar {
+        width: 8%;
+        margin: 0 10px;
+        cursor: pointer;
+        }
+        }
+
+
+        .detalleCompra {
+            @include titulos(nth($font-family, 6), nth($font-size, 4), $aling, $text-uppercase);
+            color: nth($color, 8);
+            @extend %flex-3;
+            margin-top: 13px;
+
+            .botonFinalizar{
+            @include sub-titulos(nth($font-family, 3), nth($font-size, 1), $aling);
+            text-decoration: $text-none;
+            color: nth($color, 8);
+            background-color: nth($color, 3);
+            @extend %boton;
+            border: none;
+            position: relative;
+            bottom: 6px;
+
+                &:hover {
+                background-color: nth($color, 4);
+                }
+            }
+            }
+
+        }
+
+        .contenedor-carrito::after{
+        --tooltip-bg-color: #377831;
+        content: " ";
+        position: absolute;
+        top: 1px;
+        transform: translateX(-50%) translateY(-100%);
+        right: 43%;
+        border: 12px solid transparent;
+        border-bottom: 12px solid var(--tooltip-bg-color);
+        }
+
+
+/* FIN SECCION CARRITO */
+
+.inicio-carrito {
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    .titulo-carrito-inicio {
+        @include titulos(nth($font-family, 5), nth($font-size, 4), $aling, $text-uppercase);
+        letter-spacing: $letter-spacing - 8px;
+        color: nth($color, 1);
+        padding-top: 25px;
+    }
+    .listado {
+        @extend %flex-3;
+        padding: 26px 77px 10px 90px;
+
+        p {
+        @include sub-titulos(nth($font-family, 1), nth($font-size, 9), $aling);
+        letter-spacing: $letter-spacing - 8px;
+        color: nth($color, 7);
+        }
+    }
+    .contenedor-carrito2 {
+    @extend %flex;
+    width: $ancho - 20%;
+
+    .detalleCompraTitulo {
+        @include titulos(nth($font-family, 6), nth($font-size, 6), $aling, $text-uppercase);
+        background-color: nth($color, 8);
+        letter-spacing: $letter-spacing - 8px;
+        color: nth($color, 1);
+        padding: 100px 280px;
+        margin: 42px 0 -110px 0;
+        position: relative;
+        top: -145px;
+    }
+
+    .botonVolver{
+        @include sub-titulos(nth($font-family, 3), nth($font-size, 1), $aling);
+        text-decoration: $text-none;
+        color: nth($color, 8);
+        background-color: nth($color, 3);
+        @extend %boton;
+        border: none;
+        position: relative;
+        bottom: 6px;
+        margin: 20px 50px 70px 50px;
+
+            &:hover {
+            background-color: nth($color, 4);
+            }
+    }
+
+    .card-carrito {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 4px 10px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+
+    .img-carrito {
+    border-radius: 10px 10px 0 0;
+    width: $ancho - 94%;
+    }
+
+    .titulo-carrito {
+    font-family:  nth($font-family, 2);
+    font-size:  nth($font-size, 1);
+    color: nth($color, 7);
+    margin: 0;
+    padding: 0 10px 0 10px;
+    }
+
+    .precioCarrito {
+    font-family:  nth($font-family, 2);
+    font-size:  nth($font-size, 1);
+    color: nth($color, 7);
+    margin: 0;
+    padding: 0 10px 0 10px;
+    }
+
+    .cantidadCarrito {
+    @include sub-titulos(nth($font-family, 1), nth($font-size, 1), $aling);
+    color: nth($color, 7);
+    width: 5rem;
+    // margin: 0 20px 0 10px;
+    }
+
+    .borrar {
+    width: 2.5%;
+    margin: 0 10px;
+    cursor: pointer;
+    }
+
+    }
+
+
+    .detalleCompra {
+        @include titulos(nth($font-family, 6), nth($font-size, 4), $aling, $text-uppercase);
+        color: nth($color, 3);
+        letter-spacing: $letter-spacing - 8px;
+        @extend %flex-3;
+        margin-top: 40px;
+
+        .botonFinalizar{
+        @include sub-titulos(nth($font-family, 3), nth($font-size, 1), $aling);
+        text-decoration: $text-none;
+        color: nth($color, 8);
+        background-color: nth($color, 3);
+        @extend %boton;
+        border: none;
+        position: relative;
+        bottom: 6px;
+
+            &:hover {
+            background-color: nth($color, 4);
+            }
+        }
+        }
+
+}
+}
+
+/* Media Querys Carrito */
+
+/* Mobile */
+@media only screen and (max-width:480px) {
+    .inicio-carrito {
+
+        .listado {
+            @extend %flex-3;
+            padding: 26px 50px 0 50px;
+
+            p {
+            @include sub-titulos(nth($font-family, 1), nth($font-size, 9), $aling);
+            letter-spacing: $letter-spacing - 10px;
+            color: nth($color, 7);
+            }
+        }
+
+        .contenedor-carrito2 {
+
+            .detalleCompraTitulo {
+            @include titulos(nth($font-family, 6), nth($font-size, 6), $aling, $text-uppercase);
+            background-color: nth($color, 8);
+            color: nth($color, 1);
+            padding: 100px 135px;
+            margin: 0 0 -110px 0;
+            position: relative;
+            top: -175px;
+            }
+
+        .card-carrito {
+            border-radius: 5px;
+            margin: 4px 0;
+
+            .img-carrito {
+            width: 13%;
+            }
+
+            .borrar {
+            width: 5.5%;
+            }
+        }
+        }
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width:481px) and (max-width:768px) {
+    .inicio-carrito {
+
+        .titulo-carrito-inicio {
+        margin: 0 120px;
+        }
+
+        .contenedor-carrito2 {
+
+            .detalleCompraTitulo {
+            @include titulos(nth($font-family, 6), nth($font-size, 6), $aling, $text-uppercase);
+            background-color: nth($color, 8);
+            letter-spacing: $letter-spacing - 8px;
+            color: nth($color, 1);
+            padding: 100px 100px;
+            margin: 0 -65px -110px -65px;
+            position: relative;
+            top: -150px;
+            }
+
+            .card-carrito {
+                border-radius: 5px;
+                margin: 4px 0;
+
+                .img-carrito {
+                width: 13%;
+                }
+
+                .borrar {
+                width: 5.5%;
+                }
+            }
+        }
+    }
+
+}

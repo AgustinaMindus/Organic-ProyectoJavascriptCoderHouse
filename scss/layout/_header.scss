@@ -1,0 +1,116 @@
+/* Header */
+.header {
+  .nav {
+    width: $ancho;
+    padding: 5px 70px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    .logo {
+      width: 15%;
+      height: 15%;
+    }
+
+    .hamburger{
+      font-size: nth($font-size, 4);
+      border: 1px solid green;
+      background-color: nth($color, 1);
+    }
+
+    .nav-item {
+      .item {
+      @include titulos(nth($font-family, 3), nth($font-size, 1), $aling, $text-uppercase);
+      color: nth($color, 7);
+      padding: 6px 20px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: nth($color, 3);
+        color: nth($color, 8);
+      }
+      }
+    }
+    .nav-item2{
+      .badge {
+        color: nth($color, 7);
+        border-radius: 10px;
+        display: inline-block;
+        @include titulos(nth($font-family, 3), nth($font-size, 1), $aling, $text-uppercase);
+        line-height: 1;
+        padding: 3px;
+        vertical-align: middle;
+        white-space: nowrap;
+        position: relative;
+        bottom: 9px;
+        right: 8px;
+      }
+    }
+  }
+
+  .favoritos:hover {
+    background-image: url("../multimedia/favoritos_2.svg");
+    background-repeat: no-repeat;
+  }
+}
+/* Fin Header */
+
+/* Media Querys Header */
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  .header {
+    .nav {
+    padding: 0 5px;
+
+      .logo {
+      width: 50%;
+      height: 50%;
+      margin: 10px 5px;
+      }
+
+      .hamburger {
+      text-align: right;
+      }
+      .nav-item {
+        .item {
+       font-size: 1.7rem;
+       padding: 7px 15px;
+       }
+      }
+
+      .submenu {
+      font-size: 1.7rem;
+      margin-left: 0;
+      }
+      .perfil {
+      margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width:481px) and (max-width:768px) {
+  .header {
+    .nav {
+    padding: 5px 30px;
+
+      .logo {
+      width: $ancho - 70%;
+      height: $ancho - 70%;
+      margin: 13px 0;
+      }
+
+      .hamburger {
+      text-align: right;
+      }
+
+      .perfil {
+      margin-bottom: 10px;
+      }
+    }
+  }
+}
+/* Fin Media Querys Header */

@@ -1,0 +1,98 @@
+/* SECCION TIENDA INICIO*/
+.tienda-general {
+    background-color: nth($color, 8);
+    width: $ancho;
+    padding: 40px 20px;
+
+        h1 {
+        @include titulos(nth($font-family, 4), nth($font-size, 6), $aling, $text-uppercase);
+        letter-spacing: $letter-spacing - 8px;
+        color: nth($color, 1);
+        padding-top: 70px;
+        padding-bottom: 40px;
+        }
+
+        .contenedor-tienda {
+            @extend %flex-3;
+
+            .card-tienda {
+            background-color: transparent;
+            border-radius: 10px;
+            width: 25rem;
+            overflow: hidden;
+            padding-bottom: 40px;
+            padding-top: 23px;
+            margin: 0 15px;
+
+            .img-tienda {
+            border-radius: 10px 10px 0 0;
+            height: 15%;
+            @include prefijos2(all 1s ease-in-out);
+
+                &:hover {
+                @include prefijos(scale(1.05));
+                }
+            }
+
+            .favoritos {
+                border-radius: 10px 10px 0 0;
+                width: 15%;
+                cursor: pointer;
+                position: relative;
+                bottom: 335px;
+                left: 200px;
+
+                &:hover {
+                    background-image: url("../multimedia/favoritos_2.svg");
+                    background-repeat: no-repeat;
+                  }
+            }
+
+            .titulo-tienda {
+            @include titulos(nth($font-family, 6), nth($font-size, 4), $aling, $text-uppercase);
+            color: nth($color, 7);
+            padding: 0 15px;
+            margin-top: 2px;
+            }
+
+            .subtitulo-tienda {
+            @include sub-titulos(nth($font-family, 1), nth($font-size, 1), $aling,);
+            color: nth($color, 7);
+            }
+
+            .precio {
+            @include sub-titulos(nth($font-family, 3), nth($font-size, 3), $aling);
+            color: nth($color, 3);
+            }
+            }
+
+        }
+
+    .parrafo-fav {
+        font-family:  nth($font-family, 1);
+        font-size:  nth($font-size, 1);
+        color: transparent;
+        position: relative;
+        top: 10px;
+        left: 58px;
+        margin: 0;
+        }
+
+    .boton {
+        @include sub-titulos(nth($font-family, 3), nth($font-size, 9), $aling);
+        text-decoration: $text-none;
+        color: nth($color, 8);
+        background-color: nth($color, 1);
+        @extend %boton;
+        margin: 0 57px;
+        border: none;
+        position: relative;
+        bottom: 70px;
+        align-items: $aling;
+
+            &:hover {
+            background-color: nth($color, 2);
+            }
+    }
+
+}

@@ -1,0 +1,24 @@
+.titulo-carrito-inicio {
+    @include titulos(nth($font-family, 5), nth($font-size, 4), $aling, $text-uppercase);
+    letter-spacing: $letter-spacing - 8px;
+    color: nth($color, 1);
+    padding-top: 25px;
+    margin-top: 110px
+}
+
+
+.botonRecetas{
+    @include sub-titulos(nth($font-family, 3), nth($font-size, 1), $aling);
+    text-decoration: $text-none;
+    color: nth($color, 8);
+    background-color: nth($color, 3);
+    @extend %boton;
+    border: none;
+    position: relative;
+    bottom: -66px;
+    z-index: 100000;
+
+        &:hover {
+        background-color: nth($color, 4);
+        }
+    }

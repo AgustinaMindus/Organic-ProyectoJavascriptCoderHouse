@@ -1,0 +1,26 @@
+@mixin prefijos($propiedad) {
+-webkit-transform:$propiedad;
+-o-transform: $propiedad;
+-moz-transform: $propiedad;
+transform: $propiedad;
+}
+
+@mixin prefijos2($propiedad) {
+-webkit-transition:$propiedad;
+-o-transition: $propiedad;
+-moz-transition: $propiedad;
+transition: $propiedad;
+}
+
+@mixin titulos($font-family, $font-size, $aling, $text-uppercase) {
+font-family: $font-family;
+font-size: $font-size;
+text-align: $aling;
+text-transform: $text-uppercase;
+}
+
+@mixin sub-titulos($font-family, $font-size, $aling) {
+font-family: $font-family;
+font-size: $font-size;
+text-align: $aling;
+}

@@ -1,0 +1,37 @@
+%flex {
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: center;
+align-items: center;
+}
+
+%flex-2 {
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: center;
+align-items: center;
+}
+
+%flex-3 {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+align-content: center;
+align-items: center;
+}
+
+%boton {
+border-radius: 5px;
+padding: 10px;
+}
+
+%texto {
+font-family: "nunito-regular";
+font-size: 19px;
+text-align: center;
+text-decoration: none;
+}
